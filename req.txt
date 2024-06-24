@@ -1,0 +1,23 @@
+ pyttsx3
+ wikipedia
+ requests
+ PyAutoGUI
+ sounddevice
+ playsound
+ wolframalpha
+urllib3
+ bs4
+ wheel
+ google-api-python-client
+ monotonic
+ SpeechRecognition
+ scipy
+ threaded
+ functools
+ pywhatkit
+ pyjokes
+ pygame
+ pyperclip
+ opencv-python
+ pysqlite3
+ db-sqlite3

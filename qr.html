@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qr code</title>
+</head>
+<body>
+    <style>
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #f2f2f2;
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 2px 2px 8px #ddd;
+        }
+      
+        select {
+          margin: 10px 0;
+          padding: 10px;
+          font-size: 16px;
+          border: none;
+          border-radius: 5px;
+          background-color: white;
+          box-shadow: 2px 2px 8px #ddd;
+        }
+      
+        input[type="button"] {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #4CAF50;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      
+        #qrCode {
+          margin-top: 20px;
+          border: 1px solid #ddd;
+          box-shadow: 2px 2px 8px #ddd;
+        }
+      </style>
+      
+      <form>
+        <select id="size">
+          <option value="100x100">100x100</option>
+          <option value="200x200">200x200</option>
+          <option value="300x300">300x300</option>
+          <option value="400x400">400x400</option>
+        </select>
+        <br><br>
+        <input type="button" value="Generate QR Code" onclick="generateQRCode()">
+      </form>
+      <br>
+      <img id="qrCode">
+      
+      <script>
+        function generateQRCode() {
+          var input = prompt("Enter the text to encode in QR code:");
+          var size = document.getElementById("size").value;
+          var qrUrl = "https://chart.googleapis.com/chart?cht=qr&chs=" + size + "&chl=" + input;
+          document.getElementById("qrCode").src = qrUrl;
+        }
+      </script>
+      
+      
+</body>
+</html>

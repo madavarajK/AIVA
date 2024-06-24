@@ -1,0 +1,2 @@
+import Snake
+Snake.start()
